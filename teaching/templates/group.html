@@ -1,0 +1,20 @@
+
+<html>
+
+    <div style="border:1px solid black; height:600px; width:400px; margin:50px;">
+        <form action="{% url 'group' %}" method="POST">
+            {% csrf_token %}
+            <select name="group_id" style="width:350px; height:50px; margin:20;">
+                {% for group in groups %}
+                    <option value="{{ group.id }}">{{ group.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" style="margin-left:300px; margin-top:15px; ">Show</button>
+        </form>
+            <ul>
+                {% for student in students %}
+                    <li>{{ student.id }}. {{ student.last_name }} {{ student.name }}</li>
+                {% endfor %}
+            </ul>
+    </div>
+</html>

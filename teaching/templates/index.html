@@ -1,0 +1,23 @@
+<html>
+<div style="border:1px solid black; height:600px; width:400px; margin:50px;">
+        <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter name" style="width:350; height:50; margin:20">
+            <input type="text" name="last_name" placeholder="Enter last name" style="width:350; height:50; margin:20;">
+            <input type="text" name="phone_number" placeholder="Enter phone number" style="width:350; height:50; margin:20;">
+
+            <select name="group_id" style="width:350px; height:50px; margin:20;">
+                {% for group in groups %}
+                    <option value="{{ group.id }}">{{ group.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit"  style="border: 5px solid black; width: 20%; height: 40px;  margin: 20px 40%; color: white; background-color: green;  ">Create</button>
+
+        </form>
+        <ul>
+            {% for student in students %}
+                <a href="edit_student/{{ student.id }}"> <li>{{ student.id }}. {{ student.last_name }} {{ student.name }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+</html>
