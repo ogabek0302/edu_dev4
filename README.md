@@ -2,7 +2,7 @@
 <html>
 
 <body>
-	<h1>IT Ta'lim markazi uchun Github Repositoryasi</h1>
+	<h1>Bobur Akilhonov IT Ta'lim markazi uchun Github Repositoryasi</h1>
 	<p>Ushbu repositorya IT sohasida tajriba olishni istagan o'quvchilar uchun yuqori sifatli IT ta'lim resurslarini va kontentlarini taqdim etish maqsadida yaratilgan IT Ta'lim markazining rivojlantirish va saqlashiga bag'ishlangan.</p>
 	<h2>Xususiyatlari</h2>
 	<ul>
